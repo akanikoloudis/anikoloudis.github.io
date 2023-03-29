@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Name</title>
+	<title>Alexandros</title>
 	<style>
+		body {
+			background-color: #f5f5f5;
+		}
 		.emily {
-			color: #1E90FF; /* change the color to a shade of blue */
+			color: rgb(0, 16, 98); /* change the color to a shade of blue */
 			font-size: 24px; /* increase the font size for emphasis */
 			font-family: Arial, sans-serif; /* set a more common font */
 			font-weight: bold; /* make the text bold for emphasis */
@@ -13,9 +16,35 @@
 			letter-spacing: 2px; /* add some extra spacing between the letters */
 			margin-top: 20px; /* add some space between the text and the top of the page */
 		}
+		.counter {
+            font-size: 150px;
+			font-family: Arial, sans-serif; /* set a more common font */
+			justify-content: center;
+			text-align: center;
+            color: rgb(0, 16, 98);
+        }
 	</style>
 </head>
 <body>
-	<p class="emily">Hey emily you are a beuty</p>
+	<p class="emily">Coming Soon...</p>
+	<p class="counter" id="count"></p>
+	
+	<script>
+
+		// initialize counter variable from local storage or set to 0
+		let count = parseInt(localStorage.getItem('count')) || 0;
+
+		// define function to increment counter and update webpage
+		function updateCounter() {
+			count++;
+			document.getElementById('count').innerHTML = count;
+			localStorage.setItem('count', count); // store count value in local storage
+		}
+
+		
+		// call updateCounter function every second
+		setInterval(updateCounter, 1000);
+	</script>
+
 </body>
 </html>
