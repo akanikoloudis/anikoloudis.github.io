@@ -1,77 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Nikoloudis</title>
-	<style>
-		body {
-			background-color: #f5f5f5;
+    <title>Stello Menu</title>
+    <style>
+        body {
+			background-color: black;
 		}
-		.someone {
-			text-align: center;
-			margin-bottom: 10px;
-			position: absolute;
-			left: 50%;
+		.image-container{
+			align-content: center;
 		}
-		.title {
-			color: rgb(124, 3, 151); /* change the color to a shade of blue */
-			font-size: 55px; /* increase the font size for emphasis */
-			font-family: Arial, sans-serif; /* set a more common font */
-			font-weight: bold; /* make the text bold for emphasis */
-			text-align: center; /* center the text horizontally */
-			text-transform: uppercase; /* convert the text to all caps */
-			letter-spacing: 2px; /* add some extra spacing between the letters */
-			margin-top: 80px; /* add some space between the text and the top of the page */
-			text-decoration: underline;
-		}
-		.counter {
-			font-size: 150px;
-			font-family: Arial, sans-serif;
-			justify-content: center;
-			text-align: center;
-			color:  rgb(124, 3, 151);
-			margin-top: 10px;
-			position: absolute;
-			left: 50%;
-        }
-
-	</style>
+    </style>
 </head>
 <body>
-	<p class="title">Brace Yourself</p>
-	<p class="someone">You have been here for...</p>
-	<p class="counter" id="count"></p>
-
-	<script>
-
-		let someoneElem = document.querySelector('.someone');
-		let counterElem = document.querySelector('.counter');
-
-		setInterval(function() {
-			let randomX = Math.floor(Math.random() * window.innerWidth);
-			let randomY = Math.floor(Math.random() * window.innerHeight);
-
-			someoneElem.style.left = randomX + 'px';
-			someoneElem.style.top = randomY + 'px';
-
-			counterElem.style.left = randomX + 'px';
-			counterElem.style.top = randomY + 'px';
-
-		}, 1000);
-
-		// initialize counter variable from local storage or set to 0
-		let count = parseInt(localStorage.getItem('count')) || 0;
-
-		// define function to increment counter and update webpage
-		function updateCounter() {
-			count++;
-			document.getElementById('count').innerHTML = count + "s";
-			localStorage.setItem('count', count); // store count value in local storage
-		}
-
-		
-		// call updateCounter function every second
-		setInterval(updateCounter, 1000);
-	</script>
-
+    <div class="image-container">
+        <img src="https://drive.google.com/uc?id=1is0cPsCcaMgc9eiuX-MKTDqNgmHPTKUH" alt="Image 1">
+        <img src="https://drive.google.com/uc?id=1CXi1mB4jUePN590MdcuZhyaF3OyNqI2O" alt="Image 2">
+        <img src="https://drive.google.com/uc?id=1Vb-md6joyftiKdMTWYEDiPeUgqCUC7nX" alt="Image 3">
+    </div>
 </body>
-</html>
+</html> 
